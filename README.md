@@ -1,0 +1,2 @@
+# dicebot
+descent utility bot
