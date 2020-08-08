@@ -1,7 +1,8 @@
 # dicebot
 Descent utility bot v0.1
 
-Installation:
+## Installation:
+
 Rename .env.template -> .env
 
 Then add your bot client key to .env
@@ -11,39 +12,39 @@ Rename stat.pkl.template -> stat.pkl
 It is where throw statistics will be stored Now you can run the bot with:
 python dice-bot.py
 
-Usage:
+## Usage:
 
-Bot can roll dice, reacting to any messages with keywords in #bots channel. 
+Bot can roll dice, reacting to any messages with keywords in **#bots** channel. 
 
 Keywords can be separated with spaces for throwing multiple dice. Bot also supports cirillic
 
-Keyword list:
+### Keyword list:
 
-blue/b/с - blue die
+- blue/b/с - blue die
 
-green/g/з - green die
+- green/g/з - green die
 
-yellow/y/ж - yellow die
+- yellow/y/ж - yellow die
 
-red/r/к - red die
+- red/r/к - red die
 
-brown/br/зк - brown die
+- brown/br/зк - brown die
 
-gray/gr/зс - gray die
+- gray/gr/зс - gray die
 
-black/bl/зч - black die
+- black/bl/зч - black die
 
-check/t/т - attribute test (gray+black)
+- check/t/т - attribute test (gray+black)
 
-hide - must be at start of a message, shows only total of entire throw
+- hide - must be at start of a message, shows only total of entire throw
 
-blue-stat/green-stat/yellow-stat/etc - shows throw statistics of particular die
+- blue-stat/green-stat/yellow-stat/etc - shows throw statistics of particular die
 
 
-To do list:
+## To do list:
 
-Add unhide and re-roll options
+- [ ] Add unhide and re-roll options
 
-Add support for separate defense rolls in one message
+- [ ] Add support for separate defense rolls in one message
 
-Some code optimization
+- [ ] Some code optimization
