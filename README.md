@@ -9,8 +9,9 @@ Then add your bot client key to .env
 
 Rename stat.pkl.template -> stat.pkl
 
-It is where throw statistics will be stored Now you can run the bot with:
-python dice-bot.py
+It is where throw statistics will be stored 
+
+Now you can run the bot with *python dice-bot.py*
 
 ## Usage:
 
