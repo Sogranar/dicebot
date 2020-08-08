@@ -1,5 +1,5 @@
 # dicebot
-Descent utility bot v0.1
+Discord Descent utility bot v0.1
 
 ## Installation:
 
