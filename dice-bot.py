@@ -90,11 +90,17 @@ async def on_message(message):
         path = './cards/**/{}.*'.format(img_name)
         if (glob.glob(path)) == [] : await message.channel.send('Nothing found')
         img_path = glob.glob(path)
-        for img in [0, 1, 2, 3, 4]:
-            if ((img_path[img] == './cards/lieutenants/baron-zachareth-act1.jpg') | (img_path[img] == './cards/agents/baron-zachareth-agent-act1.jpg')) : await message.channel.send('This is not even my final form!')
-            if ((img_path[img] == './cards/lieutenants/baron-zachareth-act2.jpg') | (img_path[img] == './cards/agents/baron-zachareth-agent-act2.jpg')) : await message.channel.send('Tremble before me, pityfull heroes!')
-            await message.channel.send(file=discord.File(img_path[img]))
-        if (len(img_path) > 5): await message.channel.send('Too many results')
+        if (len(img_path) < 3) :
+            for img in [0, 1] :
+                if ((img_path[img] == './cards/lieutenants/baron-zachareth-act1.jpg') | (img_path[img] == './cards/agents/baron-zachareth-agent-act1.jpg')) : await message.channel.send('This is not even my final form!')
+                if ((img_path[img] == './cards/lieutenants/baron-zachareth-act2.jpg') | (img_path[img] == './cards/agents/baron-zachareth-agent-act2.jpg')) : await message.channel.send('Tremble before me, pityfull heroes!')
+                await message.channel.send(file=discord.File(img_path[img]))
+        if (len(img_path) > 2) :
+            await message.channel.send('Too many results. Choose one of the relevant matches:')
+            for img in [0, 1, 2, 3, 4] :
+                img_path_txt = img_path[img].split('/')
+                img_path_txt = img_path_txt[3].replace('-',' ').split('.')
+                await message.channel.send(img_path_txt[0])
 
     if message.channel.name != 'bots': return
 
